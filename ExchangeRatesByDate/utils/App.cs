@@ -9,6 +9,11 @@ namespace ExchangeRatesByDate.utils
 {
     public class App
     {
+        /*
+         * ExchangeRates[0] - currency exchange rates of the requested date;
+         * ExchangeRates[1] - currency exchange rates of the day before the requested date;
+         * ExchangeRates[2] - object with the results: currencies and their rate changes.
+        */
         private List<ExchangeRate> ExchangeRates { get; set; }
         public List<string> Dates { get; }
 
@@ -20,9 +25,8 @@ namespace ExchangeRatesByDate.utils
 
         public async Task GetExchangeDataAsync()
         {
-            for (var i = 0; i < 2; i++)
+            foreach (var resourceUri in Dates.Select(ResourceApi.GetUri))
             {
-                var resourceUri = ResourceApi.GetUri(Dates[i]);
                 ExchangeRates.Add(await XmlConverter.ParseObjAsync<ExchangeRate>(resourceUri));
             }
         }
@@ -48,9 +52,11 @@ namespace ExchangeRatesByDate.utils
                         i.Currency == requestedItem.Currency);
 
                 if (previousItem == null) continue;
-                var item = new Item();
-                item.Currency = requestedItem.Currency;
-                item.Rate = requestedItem.Rate - previousItem.Rate;
+                var item = new Item
+                {
+                    Currency = requestedItem.Currency,
+                    Rate = requestedItem.Rate - previousItem.Rate
+                };
 
                 ExchangeRates[2].Items.Add(item);
             }
