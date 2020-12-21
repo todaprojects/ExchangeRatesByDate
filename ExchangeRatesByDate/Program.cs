@@ -13,15 +13,15 @@ namespace ExchangeRatesByDate
             {
                 try
                 {
-                    Console.Write("Date: ");
-                    var requestedDate = Date.Parse(Console.ReadLine());
+                    Console.Write("DateHelper: ");
+                    var requestedDate = DateHelper.Parse(Console.ReadLine());
 
                     if (requestedDate != null)
                     {
                         var app = new App();
 
                         app.Dates.Add(requestedDate);
-                        app.Dates.Add(Date.GetPrevious());
+                        app.Dates.Add(DateHelper.GetPrevious());
 
                         await app.GetExchangeDataAsync();
 

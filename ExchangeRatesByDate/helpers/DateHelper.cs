@@ -2,7 +2,7 @@ using System;
 
 namespace ExchangeRatesByDate.helpers
 {
-    public static class Date
+    public static class DateHelper
     {
         private static readonly DateTime MinDate = new DateTime(1993, 6, 25);
         private static readonly DateTime MaxDate = new DateTime(2015, 01, 01);
