@@ -13,7 +13,7 @@ namespace ExchangeRatesByDate
             {
                 try
                 {
-                    Console.Write("DateHelper: ");
+                    Console.Write("Date: ");
                     var requestedDate = DateHelper.Parse(Console.ReadLine());
 
                     if (requestedDate != null)
