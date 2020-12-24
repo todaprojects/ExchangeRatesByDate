@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace ExchangeRatesByDate.utils
+namespace ExchangeRatesByDate.Utils
 {
     public static class XmlConverter
     {

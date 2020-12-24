@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace ExchangeRatesByDate.models
+namespace ExchangeRatesByDate.Models
 {
     [XmlRoot("ExchangeRates")]
     public class ExchangeRate

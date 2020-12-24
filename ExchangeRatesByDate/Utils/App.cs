@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ExchangeRatesByDate.config;
-using ExchangeRatesByDate.models;
+using ExchangeRatesByDate.Config;
+using ExchangeRatesByDate.Models;
 
-namespace ExchangeRatesByDate.utils
+namespace ExchangeRatesByDate.Utils
 {
     public class App
     {

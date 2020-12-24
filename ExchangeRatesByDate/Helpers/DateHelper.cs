@@ -1,6 +1,6 @@
 using System;
 
-namespace ExchangeRatesByDate.helpers
+namespace ExchangeRatesByDate.Helpers
 {
     public static class DateHelper
     {

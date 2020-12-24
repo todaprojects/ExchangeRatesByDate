@@ -1,7 +1,7 @@
 using System.Xml.Serialization;
-using ExchangeRatesByDate.models;
+using ExchangeRatesByDate.Models;
 
-namespace ExchangeRatesByDate.utils
+namespace ExchangeRatesByDate.Utils
 {
     public static class XmlSerializerHandler
     {

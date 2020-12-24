@@ -1,15 +1,15 @@
 using System.Xml.Serialization;
 
-namespace ExchangeRatesByDate.models
+namespace ExchangeRatesByDate.Models
 {
     [XmlType("item")]
     public class Item
     {
-        [XmlElementAttribute("date")]
+        [XmlElement("date")]
         public string Date { get; set; }
-        [XmlElementAttribute("currency")]
+        [XmlElement("currency")]
         public string Currency { get; set; }
-        [XmlElementAttribute("rate")]
+        [XmlElement("rate")]
         public decimal Rate { get; set; }
     }
 }

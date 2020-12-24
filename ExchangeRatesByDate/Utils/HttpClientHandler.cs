@@ -1,6 +1,6 @@
 using System.Net.Http;
 
-namespace ExchangeRatesByDate.utils
+namespace ExchangeRatesByDate.Utils
 {
     public static class HttpClientHandler
     {

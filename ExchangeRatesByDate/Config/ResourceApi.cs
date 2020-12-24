@@ -1,4 +1,4 @@
-namespace ExchangeRatesByDate.config
+namespace ExchangeRatesByDate.Config
 {
     public static class ResourceApi
     {

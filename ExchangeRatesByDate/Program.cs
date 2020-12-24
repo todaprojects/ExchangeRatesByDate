@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using ExchangeRatesByDate.helpers;
-using ExchangeRatesByDate.utils;
+using ExchangeRatesByDate.Helpers;
+using ExchangeRatesByDate.Utils;
 
 namespace ExchangeRatesByDate
 {
