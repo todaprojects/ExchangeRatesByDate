@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using ExchangeRatesByDate.Config;
 using ExchangeRatesByDate.Models;
@@ -9,12 +10,13 @@ namespace ExchangeRatesByDate.Utils
 {
     public class App
     {
-        /*
-         * ExchangeRates[0] - currency exchange rates of the requested date;
-         * ExchangeRates[1] - currency exchange rates of the day before the requested date;
-         * ExchangeRates[2] - object with the results: currencies and their rate changes.
-        */
+        /// <summary>
+        /// ExchangeRates[0] - currency exchange rates of the requested date;
+        /// ExchangeRates[1] - currency exchange rates of the day before the requested date;
+        /// ExchangeRates[2] - object with the results: currencies and their rate changes.
+        /// </summary>
         private List<ExchangeRate> ExchangeRates { get; set; }
+
         public List<string> Dates { get; }
 
         public App()
@@ -31,17 +33,19 @@ namespace ExchangeRatesByDate.Utils
             }
         }
 
-        public void PrintResults()
+        public string GetExchangeResults()
         {
-            GetExchangeResults();
+            var result = new StringBuilder();
 
             foreach (var item in OrderItemList())
             {
-                Console.WriteLine($"{item.Currency} {item.Rate:N4}");
+                result.Append($"{item.Currency} {item.Rate:N4}\n");
             }
+
+            return result.ToString();
         }
 
-        private void GetExchangeResults()
+        public void FormExchangeResults()
         {
             ExchangeRates.Add(new ExchangeRate());
 
