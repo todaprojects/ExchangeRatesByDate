@@ -25,8 +25,6 @@ namespace ExchangeRatesByDate
 
                         await app.GetExchangeDataAsync();
 
-                        app.FormExchangeResults();
-
                         var printer = ConsolePrinterFactory.GetPrinter();
                         printer.Print(app.GetExchangeResults());
 
