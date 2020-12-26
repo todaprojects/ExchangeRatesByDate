@@ -2,9 +2,9 @@ namespace ExchangeRatesByDate.Utils.Factories
 {
     public class AppFactory
     {
-        public static App GetInstance()
+        public static App.App GetInstance()
         {
-            return new App();
+            return new App.App();
         }
     }
 }

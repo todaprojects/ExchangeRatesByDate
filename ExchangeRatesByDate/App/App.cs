@@ -4,8 +4,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ExchangeRatesByDate.Config;
 using ExchangeRatesByDate.Models;
+using ExchangeRatesByDate.Utils;
+using ExchangeRatesByDate.Utils.Factories;
 
-namespace ExchangeRatesByDate.Utils
+namespace ExchangeRatesByDate.App
 {
     public class App
     {
@@ -35,8 +37,10 @@ namespace ExchangeRatesByDate.Utils
         public string GetExchangeResults()
         {
             var result = new StringBuilder();
+            var sorter = SorterFactory.GetSorter();
+            var orderedItemList = sorter.OrderList(ExchangeRates[2].Items);
 
-            foreach (var item in OrderItemList())
+            foreach (var item in orderedItemList)
             {
                 result.Append($"{item.Currency} {item.Rate:N4}\n");
             }
@@ -63,11 +67,6 @@ namespace ExchangeRatesByDate.Utils
 
                 ExchangeRates[2].Items.Add(item);
             }
-        }
-
-        private IEnumerable<Item> OrderItemList()
-        {
-            return ExchangeRates[2].Items.OrderByDescending(i => i.Rate).ToList();
         }
     }
 }
