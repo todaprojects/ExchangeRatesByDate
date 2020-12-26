@@ -2,6 +2,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using ExchangeRatesByDate.Utils.Factories;
 
 namespace ExchangeRatesByDate.Utils
 {

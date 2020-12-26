@@ -1,4 +1,4 @@
-namespace ExchangeRatesByDate.Printer
+namespace ExchangeRatesByDate.Utils.Printer
 {
     public interface IPrinter
     {

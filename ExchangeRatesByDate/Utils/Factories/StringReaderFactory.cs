@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace ExchangeRatesByDate.Utils
+namespace ExchangeRatesByDate.Utils.Factories
 {
     public class StringReaderFactory
     {

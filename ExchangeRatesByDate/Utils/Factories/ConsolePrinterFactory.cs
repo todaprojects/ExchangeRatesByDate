@@ -1,6 +1,6 @@
-using ExchangeRatesByDate.Printer;
+using ExchangeRatesByDate.Utils.Printer;
 
-namespace ExchangeRatesByDate.Utils
+namespace ExchangeRatesByDate.Utils.Factories
 {
     public class ConsolePrinterFactory
     {

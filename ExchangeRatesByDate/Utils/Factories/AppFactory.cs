@@ -1,4 +1,4 @@
-namespace ExchangeRatesByDate.Utils
+namespace ExchangeRatesByDate.Utils.Factories
 {
     public class AppFactory
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace ExchangeRatesByDate.Printer
+namespace ExchangeRatesByDate.Utils.Printer
 {
     public class ConsolePrinter : IPrinter
     {
