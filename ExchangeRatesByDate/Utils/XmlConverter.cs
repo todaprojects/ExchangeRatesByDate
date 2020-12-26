@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace ExchangeRatesByDate.Utils
 {
-    public static class XmlConverter
+    public class XmlConverter
     {
         private static readonly HttpClient HttpClient = HttpClientHandler.GetInstance();
         private static string _resourceUri;

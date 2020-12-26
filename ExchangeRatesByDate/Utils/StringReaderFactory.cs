@@ -2,7 +2,7 @@ using System.IO;
 
 namespace ExchangeRatesByDate.Utils
 {
-    public static class StringReaderFactory
+    public class StringReaderFactory
     {
         private static string _responseBody;
 
