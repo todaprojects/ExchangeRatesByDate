@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using ExchangeRatesByDate.Helpers;
+using ExchangeRatesByDate.Printer;
 using ExchangeRatesByDate.Utils;
 
 namespace ExchangeRatesByDate
@@ -18,14 +19,17 @@ namespace ExchangeRatesByDate
 
                     if (requestedDate != null)
                     {
-                        var app = new App();
+                        var app = AppFactory.GetInstance();
 
                         app.Dates.Add(requestedDate);
                         app.Dates.Add(DateHelper.GetPrevious());
 
                         await app.GetExchangeDataAsync();
 
-                        app.PrintResults();
+                        app.FormExchangeResults();
+
+                        var printer = ConsolePrinterFactory.GetPrinter();
+                        printer.Print(app.GetExchangeResults());
 
                         break;
                     }
