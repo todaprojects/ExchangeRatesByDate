@@ -53,10 +53,13 @@ namespace ExchangeRatesByDate.App
         {
             var items = new List<Item>();
 
-            foreach (var requestedItem in ExchangeRates[0].Items)
+            var requestedExchangeRates = ExchangeRates[0].Items;
+            var previousExchangeRates = ExchangeRates[1].Items;
+
+            foreach (var requestedItem in requestedExchangeRates)
             {
                 var previousItem =
-                    ExchangeRates[1].Items.Find(i =>
+                    previousExchangeRates.Find(i =>
                         i.Currency == requestedItem.Currency);
 
                 if (previousItem == null) continue;
